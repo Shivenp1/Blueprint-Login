@@ -12,7 +12,7 @@ def authenticate_with_server():
     print("[C]: " + initial_message)
 
     # Send the username to the server
-    username = input("Enter your username: ")
+    username = input("")
     cs.send(username.encode())
 
     # Receive and print the message asking for the password from the server
@@ -20,7 +20,7 @@ def authenticate_with_server():
     print("[C]: " + password_prompt)
 
     # Send the password to the server
-    password = input("Enter your password: ")
+    password = input("")
     cs.send(password.encode())
 
     # Receive and print the authentication result from the server
