@@ -19,13 +19,9 @@ user_credentials = [
 
 for user, password in user_credentials:
     cursor.execute("INSERT OR IGNORE INTO users (Username, Password) VALUES (?, ?)", (user, password))
-    # print (user, " ", password)
 
 cursor.execute("SELECT * FROM users")
 allresponses = cursor.fetchall() 
-
-for i in allresponses:
-    print(i)
 
 conn.commit()
 conn.close()
